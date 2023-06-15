@@ -6,6 +6,8 @@ let container = document.querySelector('.container');
 let todayLeft=document.querySelector('.todayLeft');
 let todayRight=document.querySelector('.todayRight');
 let todayCont = document.querySelector('.todayCont');
+
+
 export function search(){searchButton.addEventListener('click', function(event) {
     event.preventDefault();
    container.innerText="";

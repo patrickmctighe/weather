@@ -29,15 +29,15 @@ export function getCurrent() {
     //current temp
     let temp = document.createElement("div");
     temp.classList.add('temp');
-    temp.innerHTML = response.current.temp_f + "°F";
+    temp.innerHTML = response.current.temp_f + "°F" + " / " + response.current.temp_c + "°C";
     //max temp
     let maxTemp = document.createElement("div");
     maxTemp.classList.add('maxTemp');
-    maxTemp.innerHTML = "High: " + response.forecast.forecastday[0].day.maxtemp_f + "°F";
+    maxTemp.innerHTML = "High: " + response.forecast.forecastday[0].day.maxtemp_f + "°F"+" / "+response.forecast.forecastday[0].day.maxtemp_c+ "°C";
     // min temp
     let minTemp = document.createElement("div");
     minTemp.classList.add('minTemp');
-    minTemp.innerHTML = "Low: " + response.forecast.forecastday[0].day.mintemp_f + "°F";
+    minTemp.innerHTML = "Low: " + response.forecast.forecastday[0].day.mintemp_f + "°F" + " / " +response.forecast.forecastday[0].day.mintemp_c+ "°C";
     // humidity
     let humidity = document.createElement("div");
     humidity.classList.add('humidity');
@@ -88,15 +88,15 @@ export function keyCurrent(keyword) {
    //current temp
    let temp = document.createElement("div");
    temp.classList.add('temp');
-   temp.innerHTML = response.current.temp_f + "°F";
+   temp.innerHTML = response.current.temp_f + "°F" + " / " + response.current.temp_c + "°C";
    //max temp
    let maxTemp = document.createElement("div");
    maxTemp.classList.add('maxTemp');
-   maxTemp.innerHTML = "High: " + response.forecast.forecastday[0].day.maxtemp_f + "°F";
+   maxTemp.innerHTML = "High: " + response.forecast.forecastday[0].day.maxtemp_f + "°F" +" / "+response.forecast.forecastday[0].day.maxtemp_c+ "°C" ;
    // min temp
    let minTemp = document.createElement("div");
    minTemp.classList.add('minTemp');
-   minTemp.innerHTML = "Low: " + response.forecast.forecastday[0].day.mintemp_f + "°F";
+   minTemp.innerHTML = "Low: " + response.forecast.forecastday[0].day.mintemp_f + "°F" +" / "+response.forecast.forecastday[0].day.mintemp_c+ "°C";
    // humidity
    let humidity = document.createElement("div");
    humidity.classList.add('humidity');
@@ -149,14 +149,14 @@ export function getForecast() {
             // max temp
         let maxTemp = document.createElement('div');
         maxTemp.classList.add(`maxTemp${i}`);
-        maxTemp.innerHTML = "High: " + response.forecast.forecastday[i].day.maxtemp_f + "°F";
+        maxTemp.innerHTML = "High: " + response.forecast.forecastday[i].day.maxtemp_f + "°F" +" / "+response.forecast.forecastday[i].day.maxtemp_c+ "°C";
         // min temp
         let minTemp = document.createElement('div');
         minTemp.classList.add(`minTemp${i}`);
-        minTemp.innerHTML = "Low: " + response.forecast.forecastday[i].day.mintemp_f + "°F";
+        minTemp.innerHTML = "Low: " + response.forecast.forecastday[i].day.mintemp_f + "°F" +" / "+response.forecast.forecastday[i].day.mintemp_c+ "°C";
 
         day.append(dayName,icon,maxTemp,minTemp);
-        container.appendChild(day);}
+        container.appendChild(day);} 
        
     } )
     .catch(err => console.log(err));}
@@ -187,12 +187,13 @@ export function getForecast() {
                 // max temp
             let maxTemp = document.createElement('div');
             maxTemp.classList.add(`maxTemp${i}`);
-            maxTemp.innerHTML = "High: " + response.forecast.forecastday[i].day.maxtemp_f + "°F";
+            maxTemp.innerHTML = "High: " + response.forecast.forecastday[i].day.maxtemp_f + "°F" +" / "+response.forecast.forecastday[i].day.maxtemp_c+ "°C";
             // min temp
             let minTemp = document.createElement('div');
             minTemp.classList.add(`minTemp${i}`);
-            minTemp.innerHTML = "Low: " + response.forecast.forecastday[i].day.mintemp_f + "°F";
-    
+            minTemp.innerHTML = "Low: " + response.forecast.forecastday[i].day.mintemp_f + "°F" +" / "+response.forecast.forecastday[i].day.mintemp_c+ "°C";
+   
+
             day.append(dayName,icon,maxTemp,minTemp);
             container.appendChild(day);}
            

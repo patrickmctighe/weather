@@ -29,9 +29,11 @@ flex-direction: row-reverse;
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:20px;
+    gap:30px;
     padding-top: 15px;
     padding-left: 15px;
+    justify-content: center;
+    align-items: center;
     
     
 }
@@ -41,6 +43,12 @@ flex-direction: row-reverse;
 }
 .day2, .day4{
     padding-left: 25px;
+}
+.day1, .day2, .day3, .day4{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .text{
     font-size:20px;
