@@ -1,6 +1,6 @@
 *{
     background-color: lightblue;
-    color:
+  
 }
 .head{
     position: relative;
@@ -30,7 +30,7 @@ flex-direction: row-reverse;
     align-items:center;
     gap:15px;
     flex-direction: column;
-    width:;
+  
     font-size: 20px;
 }
 
