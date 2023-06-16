@@ -3,5 +3,7 @@ import "./styles.css";
 import { search } from "./functions";
 getCurrent()
 getForecast()
+// keyCurrent()
+// keyForecast()
 search()
 

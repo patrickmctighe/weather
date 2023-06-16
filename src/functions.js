@@ -13,7 +13,8 @@ export function search(){searchButton.addEventListener('click', function(event) 
    container.innerText="";
    todayCont.innerText="";
   const keyword = searchInput.value;
-  searchInput.value="";
+ 
 keyCurrent(keyword);
 keyForecast(keyword);
+ searchInput.value="";
 });}
